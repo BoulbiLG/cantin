@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="galerie.html">Voir mes photos</a>
+    <a href="prestation.html">Tarifs</a>
+    <a href="contact.html">Me contacter</a>
+</nav>
+
+<div class="all">
+    <h1>Mes photos</h1>
+    <div class="gallery">
+        <div class="gallery-filter">
+            <button class="gallery-filter-btn btn" data-category="all">Tous</button>
+            <button class="gallery-filter-btn btn" data-category="paysages">Paysages</button>
+            <button class="gallery-filter-btn btn" data-category="animaux">Animaux</button>
+            <button class="gallery-filter-btn btn" data-category="portraits">Portraits</button>
+        </div>
+        <div class="gallery-images">
+            <div class="gallery-image" data-category="paysages">
+                <img src="https://rivierabarcrawltours.com/wp-content/uploads/2020/04/provence-pic.jpg" alt="Image 1">
+                <p>Description de l'image 1</p>
+            </div>
+            <div class="gallery-image" data-category="animaux">
+                <img src="https://upload.travelawaits.com/ta/uploads/2021/04/lavender-fields-in-provence10bff5-1024x684.jpg" alt="Image 2">
+                <p>Description de l'image 2</p>
+            </div>
+            <div class="gallery-image" data-category="portraits">
+                <img src="https://tripusafrance.com/wp-content/uploads/Lavender-field-provence.jpg" alt="Image 3">
+                <p>Description de l'image 3</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+const galleryImages = document.querySelectorAll('.gallery-image');
+
+filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+    const category = btn.getAttribute('data-category');
+    
+    galleryImages.forEach((image) => {
+        if (category === 'all' || image.getAttribute('data-category') === category) {
+        image.style.display = 'block';
+        } else {
+        image.style.display = 'none';
+        }
+    });
+    });
+});
+
+</script>
+
+<style>
+    body {
+        background-image: url('https://lp-cms-production.imgix.net/features/2018/03/500pxRF_101881211_mini-f20c69b72964.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .btn {
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: 1px solid white;
+        color: white;
+        background-color: transparent;
+        margin: 0 10px 0 10px;
+        cursor: pointer;
+    }
+    img {
+        height: 500px;
+        width: 500px;
+        border-radius: 10px;
+    }
+    .gallery-filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 50px 0;
+    }
+    .gallery-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 50px 0;
+    }
+    .all {
+        display: block;
+    }
+    .gallery {
+        border-radius: 20px;
+        padding: 1%;
+        min-width: 80%;
+    }
+    h1 {
+        text-align: center;
+        margin: 200px 0 50px 0;
+        font-size: 3rem;
+        color: white;
+    }
+    p {
+        position: absolute;
+        bottom: 2vh;
+        left: 2vw;
+        color: white;
+        font-size: 1.2rem;
+    }
+    .gallery-image {
+        position: relative;
+        margin: 0 10px 0 10px;
+    }
+</style>
+
+<style>
+    
+body {
+    background-image: url('https://lp-cms-production.imgix.net/features/2018/03/500pxRF_101881211_mini-f20c69b72964.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 20px;
+    width: 30%;
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px 5px 10px 5px;
+    text-decoration: none;
+}
+    
+</style>
+
+</body>
+</html>

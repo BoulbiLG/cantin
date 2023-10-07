@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Cantin - Photographe</title>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="galerie.html">Voir mes photos</a>
+    <a href="prestation.html">Tarifs</a>
+    <a href="contact.html">Me contacter</a>
+</nav>
+
+<div class="all">
+    <h1>Me contacter</h1>
+    <form
+    action="https://formspree.io/f/xbjeqgnv"
+    method="POST"
+    >
+        <input class="input" type="email" name="email" placeholder="Votre adresse email">
+        <textarea class="input" name="message" placeholder="Votre message"></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+<style>
+    
+body {
+    background-image: url('https://lp-cms-production.imgix.net/features/2018/03/500pxRF_101881211_mini-f20c69b72964.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 20px;
+    width: 30%;
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px 5px 10px 5px;
+    text-decoration: none;
+}
+.all {
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.input {
+    outline: none;
+    border: none;
+    background-color: rgb(223, 220, 215);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    width: 800px;
+    position: relative;
+}
+
+ button {
+    outline: none;
+    border: 1px solid black;
+    background-color: transparent;
+    margin: 10px auto;
+    padding: 10px 30px;
+    border-radius: 5px;
+    width: 800px;
+    position: relative;
+    cursor: pointer;
+ }
+ textarea {
+    height: 100px;
+ }
+
+</style>
+
+</body>
+</html>
